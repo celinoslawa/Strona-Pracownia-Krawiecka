@@ -5,20 +5,22 @@
         <title>Pracownia Krawiecka</title>
         <meta name="keywords" content="krawcowa, przerbki krawieckie, ubrania sókrzane, futra" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
         <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic|Great+Vibes|Julius+Sans+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Italianno&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        
+        <link rel="shortcut icon" type="image/png" href="font/favicon-scissors%20.ico"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     </head>
    <body>
-   	<div id="container">
+   <div id="background-container">
+       <div id="main-container">
    		<div id="logo">
    			<br/>
     			<h1>Pracownia Krawiecka</h1>
     		
     			<p> "Rzeczy niemożliwe robimy od ręki na cuda trzeba chwilę poczekać." </p>
    		</div>
-   		<div id="nav">
+   		    <div id="nav">
    			<a href="?przerobkikrawieckie=onas"> <div class="option">
     				 O Nas 
 				</div></a>
@@ -31,10 +33,12 @@
     					 Galeria
     			</div></a>
     			
-    			<a href="?przerobkikrawieckie=krakow-starowislna"><div id="kontakt">
+    			<a href="?przerobkikrawieckie=krakow-starowislna"><div class="option">
     					Kontakt
     			</div></a>	
    		</div>
+   		
+   		
    		
    		<?php
     			error_reporting(E_ALL ^ E_NOTICE);
@@ -60,6 +64,7 @@
 			?>
    		
    	</div>
+   </div>
    		<script src="jquery-1.11.3.min.js"></script>
 	<script>
 		$(document).ready(function() {

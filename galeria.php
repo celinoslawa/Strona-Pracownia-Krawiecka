@@ -1,18 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="pl">
-    <head> 
-        <meta charset="utf-8" />
-        <title>Pracownia Krawiecka</title>
-        <meta name="keywords" content="krawcowa, przerbki krawieckie, ubrania sókrzane, futra" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic|Great+Vibes|Julius+Sans+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Italianno&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        
-        <script src="jquery-1.11.3.min.js"></script>
-
-    </head>
-   
     <body>
     <?php
     	$imagesTotal=12;
@@ -31,9 +18,8 @@
 		$description[12] = 'fot. Agniefotszka Skawiańczyk';
 
     ?>
-    <div id="container">
-    		
-    	<div id="galleryContainer">
+    <div class="subcontainer">
+    	<div class="content">
     		
     		<h2>Galeria</h2>
     		
