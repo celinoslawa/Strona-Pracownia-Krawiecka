@@ -66,17 +66,15 @@
 				?>
 			</div>
 		</div>
-
+<script language="JavaScript" type="text/javascript" src="jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
 // init variables
 var imagesTotal = <?php echo $imagesTotal; ?>;
 var currentImage = 1;
 var thumbsTotalWidth = 0;
 
-$('a.galleryBullet' + currentImage).addClass("active");
-$('a.thumbnailsimage' + currentImage).addClass("active");
-$('a.thumbnailsimage' + 1).addClass("active");
-$('div.description' + currentImage).addClass("visible");
+
+changeimage(currentImage);
 
 
 // SET WIDTH for THUMBNAILS CONTAINER
@@ -85,6 +83,7 @@ $(window).load(function() {
 		thumbsTotalWidth += $(this).width() + 10 + 8;
 	});
 	$('.galleryThumbnails').width(thumbsTotalWidth);
+    
 });
 
 
@@ -140,6 +139,7 @@ function changeimage(imageNumber) {
 	currentImage = imageNumber;
 	$('div.previewImage' + imageNumber).show();
 
+    
 	$('.galleryNavigationBullets a').removeClass("active");
 	$('.galleryThumbnails a').removeClass("active");
 	$('.galleryDescription > div').removeClass("visible");
