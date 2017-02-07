@@ -25,11 +25,13 @@
     		
 			<div class="galleryThumbnailsContainer">
 				<div class="galleryThumbnails">
-					<?php
-						for ($t = 1; $t <= $imagesTotal; $t++) {
-							echo '<a href="javascript: changeimage(' . $t . ')" class="thumbnailsimage' . $t . '"><img src="images/thumbs/image' . $t . '.jpg" width="auto" height="100" alt="" /></a>';
-						}
-					?>
+                    <?php
+                        for ($t = 1; $t <= $imagesTotal; $t++) {
+                            echo '<a href="javascript: changeimage(' . $t . ')" class="thumbnailsimage' . $t . '">
+                                    <div class="image-list-item" style="background-image: url(\'images/thumbs/image' . $t . '.jpg\')" alt=""></div>
+                                  </a>';
+                        }
+                    ?>
 				</div>
 			</div>
 
@@ -37,7 +39,7 @@
 				<div class="galleryPreviewImage">
 					<?php
 						for ($i = 1; $i <= $imagesTotal; $i++) {
-							echo '<img class="previewImage' . $i . '" src="images/image' . $i . '.jpg" width="900" height="auto" alt="" />';
+							echo '<div class="previewImage' . $i . '" style="background-image: url(\'images/image' . $i . '.jpg\'); " alt="" ></div>';
 						}
 					?>
 				</div>
@@ -73,12 +75,13 @@ var thumbsTotalWidth = 0;
 
 $('a.galleryBullet' + currentImage).addClass("active");
 $('a.thumbnailsimage' + currentImage).addClass("active");
+$('a.thumbnailsimage' + 1).addClass("active");
 $('div.description' + currentImage).addClass("visible");
 
 
 // SET WIDTH for THUMBNAILS CONTAINER
 $(window).load(function() {
-	$('.galleryThumbnails a img').each(function() {
+	$('.galleryThumbnails a div').each(function() {
 		thumbsTotalWidth += $(this).width() + 10 + 8;
 	});
 	$('.galleryThumbnails').width(thumbsTotalWidth);
@@ -87,7 +90,7 @@ $(window).load(function() {
 
 // PREVIOUS ARROW CODE
 $('a.previousSlideArrow').click(function() {
-	$('img.previewImage' + currentImage).hide();
+	$('div.previewImage' + currentImage).hide();
 	$('a.galleryBullet' + currentImage).removeClass("active");
 	$('a.thumbnailsimage' + currentImage).removeClass("active");
 	$('div.description' + currentImage).removeClass("visible");
@@ -100,7 +103,7 @@ $('a.previousSlideArrow').click(function() {
 
 	$('a.galleryBullet' + currentImage).addClass("active");
 	$('a.thumbnailsimage' + currentImage).addClass("active");
-	$('img.previewImage' + currentImage).show();
+	$('div.previewImage' + currentImage).show();
 	$('div.description' + currentImage).addClass("visible");
 
 	return false;
@@ -110,7 +113,7 @@ $('a.previousSlideArrow').click(function() {
 
 // NEXT ARROW CODE
 $('a.nextSlideArrow').click(function() {
-	$('img.previewImage' + currentImage).hide();
+	$('div.previewImage' + currentImage).hide();
 	$('a.galleryBullet' + currentImage).removeClass("active");
 	$('a.thumbnailsimage' + currentImage).removeClass("active");
 	$('div.description' + currentImage).removeClass("visible");
@@ -123,7 +126,7 @@ $('a.nextSlideArrow').click(function() {
 
 	$('a.galleryBullet' + currentImage).addClass("active");
 	$('a.thumbnailsimage' + currentImage).addClass("active");
-	$('img.previewImage' + currentImage).show();
+	$('div.previewImage' + currentImage).show();
 	$('div.description' + currentImage).addClass("visible");
 
 	return false;
@@ -133,9 +136,9 @@ $('a.nextSlideArrow').click(function() {
 
 // BULLETS CODE
 function changeimage(imageNumber) {
-	$('img.previewImage' + currentImage).hide();
+	$('div.previewImage' + currentImage).hide();
 	currentImage = imageNumber;
-	$('img.previewImage' + imageNumber).show();
+	$('div.previewImage' + imageNumber).show();
 
 	$('.galleryNavigationBullets a').removeClass("active");
 	$('.galleryThumbnails a').removeClass("active");
@@ -150,7 +153,7 @@ function changeimage(imageNumber) {
 
 // AUTOMATIC CHANGE SLIDES
 function autoChangeSlides() {
-	$('img.previewImage' + currentImage).hide();
+	$('div.previewImage' + currentImage).hide();
 	$('a.galleryBullet' + currentImage).removeClass("active");
 	$('a.thumbnailsimage' + currentImage).removeClass("active");
 	$('div.description' + currentImage).removeClass("visible");
@@ -163,7 +166,7 @@ function autoChangeSlides() {
 
 	$('a.galleryBullet' + currentImage).addClass("active");
 	$('a.thumbnailsimage' + currentImage).addClass("active");
-	$('img.previewImage' + currentImage).show();
+	$('div.previewImage' + currentImage).show();
 	$('div.description' + currentImage).addClass("visible");
 }
 

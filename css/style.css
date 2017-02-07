@@ -1,4 +1,16 @@
 /*GENERAL STYLES START*/
+ .galleryThumbnailsContainer::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+.galleryThumbnailsContainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.galleryThumbnailsContainer::-webkit-scrollbar-thumb {
+  background-color: #f4cbbe;
+  outline: 1px solid #f4cbbe;
+}
 body{
     overflow-x: hidden;
 }
@@ -90,7 +102,7 @@ color: #583F4E;
     margin-left: auto;
     margin-right: auto;
 }
-#middle-nav >.sticky{
+#main-container >.sticky{
     position: fixed;
     left: auto;
     top: 0;
@@ -101,13 +113,14 @@ color: #583F4E;
     width: 997px;
     margin-left: auto;
     margin-right: auto;
+    background-image: 
 }
   .content{  
-      
       clear:both; 
       width: 997px;
       min-height:590px;
       padding:19px;
+      
  }
  
         
@@ -183,13 +196,25 @@ color: #583F4E;
       height: 100%;
      }
      
-     a,
-.galleryThumbnails img {
+    
+.galleryThumbnails a .image-list-item {
 	margin: 0 auto;
 	transition: all 150ms linear;
 	align-content: center;
 	-webkit-transition: all 150ms linear;
 	-moz-transition: all 150ms linear;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 80px;
+    height: 90px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    /* margin-right: 10px; */
+    border: 4px solid #f8e5cf;
+    position: relative;
 }
 .galleryContainer {
 	margin: 0 auto;
@@ -201,17 +226,17 @@ color: #583F4E;
 	position: relative;
 	align-content: center;
 }
-.galleryPreviewImage img {
+.galleryPreviewImage{
+}
+.galleryPreviewImage div {
 	margin: 0 auto;
-	display: none;
 	border-radius: 30px;
-	align-content: center;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
-	/*box-shadow: 5px 5px 0 0 #c1c1c1;*/
-	#position: relative;
-	#top: 0;
-	#left: 0;
+    width: 700px;
+    height: 700px;
+    display: none;
+    background-position: center;
 }
 img.previewImage1 {
 	margin: 0 auto;
@@ -286,7 +311,7 @@ a.nextSlideArrow {
 	position: relative;
 	top: 0;
 }
-.galleryThumbnails a:hover img {
+.galleryThumbnails a:hover .image-list-item {
 	top: -5px;
 	border: 4px solid #f4cbbe;
 }
@@ -299,6 +324,7 @@ a.nextSlideArrow {
 .galleryDescription > div.visible {
 	display: block;
 }
+active
 
 
   
