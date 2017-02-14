@@ -19,6 +19,13 @@
  }
 }
 
+@media all and (max-width: 770px){
+    .content-1-2{
+        width: 100%;  
+        display: block;
+        vertical-align: top;
+    }
+}
 
 @media all and (max-width: 500px){
     #nav{

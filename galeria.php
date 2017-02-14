@@ -170,7 +170,7 @@ function autoChangeSlides() {
 	$('div.description' + currentImage).addClass("visible");
 }
 
-var slideTimer = setInterval(function() {autoChangeSlides(); }, 10000);
+var slideTimer = setInterval(function() {autoChangeSlides(); }, 50000);
 </script>
     		
     		<div id="footer">

@@ -16,9 +16,6 @@
        <div id="main-container">
    		<div id="logo">
    			<br/>
-    			<h1>Pracownia Krawiecka</h1>
-    		
-    			<p> "Rzeczy niemożliwe robimy od ręki na cuda trzeba chwilę poczekać." </p>
    		</div>
    		    <div id="nav">
    			<a href="?przerobkikrawieckie=onas"> <div class="option">
